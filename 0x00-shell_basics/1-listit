@@ -1,2 +1,1 @@
-#!/bin/bash ls
-/tmp/correction/7704419776496192259344593819730242507591_2/1113/3452/0x00-shell_basics
+#!/bin/bash ls ./0x00-shell_basics
