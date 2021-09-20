@@ -1,0 +1,2 @@
+echo $PATH
+source ./2-path
