@@ -1,2 +1,2 @@
-echo $PATH
-source ./2-path
+#!/bin/bash
+echo $PWD
