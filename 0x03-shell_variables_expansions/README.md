@@ -1,1 +1,1 @@
-mhill40 doing 0x03 assignment like i always have been 
+mhill44 doing the 0x03 shell_variables_expansions assignment, making aliases, writing shell scrips
