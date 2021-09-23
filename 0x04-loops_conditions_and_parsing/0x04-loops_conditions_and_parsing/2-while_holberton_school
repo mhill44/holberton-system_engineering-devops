@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-# Disiplays Holberton School 10 times using while
+#!/bin/bash
 cont=1
 while [ $cont -le 10 ];
 do

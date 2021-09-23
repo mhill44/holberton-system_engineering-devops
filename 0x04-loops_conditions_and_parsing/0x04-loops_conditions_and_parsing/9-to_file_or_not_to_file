@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-# Prints if holbertonschool file exists and if file is empty or not
+#!/bin/bash
 FILE="holbertonschool"
 if [ -e "$FILE" ]
 then

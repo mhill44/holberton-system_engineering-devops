@@ -1,0 +1,18 @@
+#!/bin/bash
+Counter=1
+while [ "$Counter" -le 20 ];
+    do
+    echo "$Counter"
+    case "$Counter" in
+4)
+    echo "bad luck from China"
+    ;;
+9)
+    echo "bad luck from Japan"
+    ;;
+17)
+    echo "bad luck from Italy"
+    ;;
+    esac
+    let Counter=Counter+1
+done
