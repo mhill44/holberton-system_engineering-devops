@@ -1,7 +1,5 @@
-
 #!/bin/bash
 FILE="holbertonschool"
-
 if [ -e "$FILE" ]
 then
     echo "holbertonschool file exists"
