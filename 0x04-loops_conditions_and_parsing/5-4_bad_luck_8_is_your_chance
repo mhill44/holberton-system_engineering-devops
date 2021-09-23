@@ -1,15 +1,15 @@
 #!/bin/bash
-CONTER=0
-while [ $CONTER -lt 10 ];
+COUNTER=0
+while [ $COUNTER -lt 10 ];
 do
-    if [ $CONTER -eq 3 ]
-    then
+if [ $COUNTER -eq 3 ]
+then
 echo "bad luck"
-    elif [ $CONTER -eq 7 ]
-    then
+elif [ $COUNTER -eq 7 ]
+then
 echo "good luck"
-    else
+else
 echo "Holberton School"
-    fi
-    let CONTER=CONTER+1
+fi
+let COUNTER=COUNTER+1
 done
