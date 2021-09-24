@@ -8,5 +8,5 @@ do
 echo "Hi"
     fi
     echo "Holberton School"
-    let cont=cont+1
+    $((cont++))
 done
