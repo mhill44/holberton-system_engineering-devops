@@ -1,0 +1,5 @@
+mhill40   161306  0.0  0.0   7256  3020 pts/2    S+   20:34   0:00  |   |           \_ sh 2-show_your_bash_pid
+mhill40   161308  0.0  0.0   6492  2340 pts/2    S+   20:34   0:00  |   |               \_ grep bash
+mhill40   161011  0.0  0.4 504248 71364 ?        Sl   20:31   0:00  |   \_ /usr/bin/kate -b /run/media/mhill40/silver/0x05-processes_and_signals/2-show_your_bash_pid
+mhill40   158875  0.0  0.0   9040  5968 pts/1    Ss+  20:08   0:00  |       \_ /usr/bin/bash
+mhill40   154014  0.0  0.9 8986376 154660 ?      Sl   19:44   0:01      |   \_ /usr/lib/electron12/electron /home/mhill40/.vscode-oss/extensions/mads-hartmann.bash-ide-vscode-1.11.0/out/server.js --node-ipc --clientProcessId=152891

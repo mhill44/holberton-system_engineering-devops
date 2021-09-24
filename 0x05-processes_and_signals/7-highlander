@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script bash displaying To infinity and beyond indefinitely w/ a sleep 2 in it and I am INVINCIBLE!!! when recieving SIGTERM signal
+i=0
+while [ $i -le 2 ];
+do
+    echo "To infinity and beyond"
+    sleep 2
+while [ read SIGTERM ];
+do
+     echo I am Invincible!!!
+let $i=0
+done
