@@ -1,2 +1,2 @@
 #!/bin/bash
-<placeholder>
+chmod 007 ./hello
