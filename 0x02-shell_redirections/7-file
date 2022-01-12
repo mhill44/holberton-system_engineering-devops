@@ -1,5 +1,2 @@
 #!/bin/bash
-touch "\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)"
-nano 7-file
-echo "Best school"
-
+echo "Best School" > "\\*\\\\'\"Best School\"\'\\\*\$\\?\\*\\*\\*\\*\\*:)"
