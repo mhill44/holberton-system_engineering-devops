@@ -1,3 +1,2 @@
 #!/bin/bash
-echo tail -10f iatca
-echo tail -1 iatca
+tail -1 iacta >> iacta
