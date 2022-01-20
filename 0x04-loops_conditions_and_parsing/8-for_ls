@@ -2,8 +2,7 @@
 # displays: a) The content of the current directory
 # b) in a list format
 # c) Where only the part of the name after the first dash is displayed
-for i in [[ "$(ls)" ]]
+for i in *
 do
-	echo "$i" | cut -d "-" -f2
-	
+    echo "$i" | rev | cut -d "-" -f 1 | rev
 done
