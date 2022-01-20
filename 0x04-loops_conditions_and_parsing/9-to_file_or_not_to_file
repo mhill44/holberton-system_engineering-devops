@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Prints if holbertonschool file exists and if file is empty or not
-FILE=holbertonschool
+FILE="holbertonschool"
 if [ -e "$FILE" ]; then
     echo "holbertonschool file exists"
     if [ -f "$FILE" ]; then
