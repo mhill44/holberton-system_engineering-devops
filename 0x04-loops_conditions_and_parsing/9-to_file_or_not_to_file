@@ -5,9 +5,6 @@ if [ -e "$FILE" ]; then
     echo "holbertonschool file exists"
     if [ -f "$FILE" ]; then
         echo "holbertonschool is a regular file"
-    else
-        :
-    fi
     if [ -s "$FILE" ]; then
         echo "holbertonschool file is not empty"
     else
