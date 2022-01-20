@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 # Prints if holbertonschool file exists and if file is empty or not
-FILE="holbertonschool"
-if [ -e "$FILE" ]
-then
+FILE=holbertonschool
+if [ -e "$FILE" ]; then
     echo "holbertonschool file exists"
-    if [ ! -s "$FILE" ]
-    then
-        echo "holbertonschool file is empty"
-    else
-        echo "holbertonschool file is not empty"
-    fi
-    if [ -f "$FILE" ]
-    then
+    if [ -f "$FILE" ]; then
         echo "holbertonschool is a regular file"
+    else
+        :
+    fi
+    if [ -s "$FILE" ]; then
+        echo "holbertonschool file is not empty"
+    else
+        echo "holbertonschool file is empty"
     fi
 else
     echo "holbertonschool file does not exist"
