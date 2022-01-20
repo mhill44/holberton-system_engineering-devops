@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# displays numbers from 1 to 100, a) FizzBuzz when number is multiple of both 3 and 5, b) Fizz when number is multiple of only 3, c) Buzz when number is multiple of only 5
+# displays numbers from 1 to 100,
+# a) FizzBuzz when number is multiple of both 3 and 5,
+# b) Fizz when number is multiple of only 3,
+# c) Buzz when number is multiple of only 5
 COUNTER=1
 while [ $COUNTER -lt 101 ]
 do
