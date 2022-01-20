@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Prints 'Best School' using a while loop
+#Prints 'Best School' using an until loop
 i=0
 until [ $i ==  10 ];
 do
