@@ -1,0 +1,9 @@
+Include /etc/ssh/ssh_config.d/*.conf
+# SSH CONF for Webserver API connection
+
+Host 	54.234.50.150
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
