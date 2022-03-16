@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
-# Configure a Nginx server so /redirect_me is
-# redirecting to a nother page
+# configures nginx config file to redirect
+
+oldtext="^\tlocation / {"
+newtext="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://facebook.com;"
+
 sudo apt-get -y update
+sudo apt-get -y upgrade
 sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-echo "Holberton School" | sudo tee /var/www/html/index
-sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/huehue.html
-sudo sed -i "/listen 80 default_server/a error_page 404 /huehue.html; location = /huehue.html { root /usr/share/nginx/html; internal; }" /etc/nginx/sites-available/default
+sudo service nginx start
+sudo echo "Hello World!" | sudo tee /var/www/html/index.html
+sudo sed -i "s@$oldtext@$newtext@" /etc/nginx/sites-available/default
 sudo service nginx restart
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/error404.html
+oldtext="^\t}"
+newtext="\t}\n\n\terror_page 404 /error404.html;"
+sudo sed -i "s@$oldtext@$newtext@" /etc/nginx/sites-available/default
+sudo service nginx restart
+sudo service nginx reload
