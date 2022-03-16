@@ -1,8 +1,28 @@
 #!/usr/bin/env bash
-# Installing Nginx on web-01 server in order to add more servers
+# Gives Nginx server an html file, redirect and 404 page
+
+# runs update and install nginx
 sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo ufw allow "Nginx HTTP"
-echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
-sudo sed -i "/listen 80 default_server/a add_header X-Served-By \"$HOSTNAME\";" /etc/nginx/sites-available/default
-sudo service nginx start
+sudo apt-get -y upgrade
+sudo apt-get install -y nginx
+
+# changes firewall to allow nginx
+sudo ufw allow 'Nginx HTTP'
+
+# echoes 'Hello World' into html file
+sudo sh -c 'echo "Hello World" > /var/www/html/index.html'
+
+# echoes 'Ceci n'est pas une page' into error404.html
+sudo sh -c "echo Ceci n\'est pas une page > /var/www/html/error404.html"
+
+# finds location in the config file and update 301 redirect
+findloc="^\tlocation / {"
+update301="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://dndbeyond.com;\n\t}\n\n\tlocation / {"
+sudo sed -i "s@$findloc@$update301@" /etc/nginx/sites-available/default
+
+# updates the 404 error
+update404="\terror_page 404 /error404.html;\n\n\tadd_header X-Served-By $HOSTNAME;\n\n\tlocation / {"
+sudo sed -i "s@$findloc@$update404@" /etc/nginx/sites-available/default
+
+# restarts the nginx service
+sudo service nginx restart
