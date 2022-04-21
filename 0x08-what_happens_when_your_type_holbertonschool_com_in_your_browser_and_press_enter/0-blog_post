@@ -1,1 +1,88 @@
 https://www.linkedin.com/posts/matt-h-8b1065198_this-is-a-post-for-class-activity-6922771816201523200-58Yy?utm_source=linkedin_share&utm_medium=member_desktop_web
+
+Whenever you a type the URL www.holbertonschool.com and press enter, you’re typing in its URL aka the  Uniform Resource Locator.
+
+It retrieves access to the address of a web page, This is where the www comes in. The browser reads your web page query and reads the page based on the HTML language. It stands for HyperText Markup Language. holberton's web page is something that isnt stored on your local machine.
+The web page needs retrieval and its stored in a web server. Its held remotely and you need to access it. to open holberton's web page, the URL gets translated to an IP address, aka the Internet Protocol.
+
+
+DNS Look Up — Domain Name System
+------------
+DNS is just a a database that stores and maintains the name of the URL (aka the website). It holds the IP address the url links to and stores the record of that IP address. Every URL in the internet holds a unique IP address. The different URLs correspond to different websites like how phone numbers work. each number correspons to a phone. The IP address contains the location of the computer. It hosts the server of the website you’re accessing. such as 104.25.115.24. i did make up that ip address i dont knwo what it links to. for people, it is very hard to remember all the different IP addresses for all the websites that we use. URLs are more friendly to remember and its access to the DNS makes the database do all the work.
+
+To access the DNS recorda website, the browser will check the cache. The cache goes through four different steps.
+
+1. Browser: It checks your browser if you recently visited Medium. Your browser stores DNS records for sites you frequently visit.
+
+Operating System: It checks your cache in your operating system. This is a system call to your OS since your OS keeps a cache of DNS records.
+
+Router: checks the router cache.  the cache is a way to keep the DNS record ready when you need it.
+
+Internet Provider: It checks the ISP cache. Finally, it checks your Internet Service Provider cache system if the following steps above fail.
+
+TCP/IP
+--------------
+TCP/IP stands for: Transmission Control Protocol + Internet Protocol.
+
+The browser now holds the IP address to access the server to the web page. The next step makes the connection by means of TCP/IP. Its the most common protocol when accessing a HTTP request. Transferring of data packets from your computer and the server is called the TCP/IP three way handshake. An exchange between the client and the server over 3 steps:
+
+SYN (Synchronize): A SYN packet sent by the client, requests if its open for new connections.
+
+ACK (Acknowledge): If open, the server responds with an ACKnowledgment of the SYN packet using a SYN/ACK packet.
+
+SYN/ACK: The client retrieves the packet and acknowledges it by sending an ACK packet back to the server. This creates the TCP connection and how the data transmission occurs.
+
+HTTP Server Request and the Load Balancer
+--------------------------------------
+You want to start transmitting data so we can get this web page up. The HTTPD is the server that maintains the requests and responses on the server side. Examples of HTTPDs include Apache, nginx for Linux, and IIS for Windows.
+
+A load balancer is the keeper of the gateway that sits in front of the servers.
+Load Balancer Functions:
+# It distributes client requests
+# It allows high availability and reliability by sending  requests to servers that are open and online
+# It provides the adaptability to increase or decrease servers as demand dictates
+
+The server breaks down the request in the following parameters:
+
+HTTP Request Method: GET — The server must verify if the website can accept GET requests.
+
+The domain name would be holbertonschool.com
+
+Requested path or page: Since there is nothing after the .com there is no path to a specific page request. This is a default path.
+
+Once the conditions are met, the server can downloadad the content that matches the request. There is an index file that corresponds with the web page that will allow the server to read the contents. The server will read the file. For instance, if holberton is running on PHP, the server uses it to interpret index file. It then, streams the output to the client (your computer).
+
+The server then provides information for HTML, CSS, JS, images, typescript, everything to the browser
+
+The Browser shows now the web page according to the HTML files specified in the HTML and CSS files.
+
+HTML Parsing and CSS interpretation
+----------------------
+To pull up the web page, the rendering machine starts grabbing the contents of the web page from the networking layer. The HTML parser will parse the HTML markup into a parse tree.
+
+The parse tree is the output of the web page. It’s a Document Object Model (DOM) that holds an element and attribute data.
+
+The parsing algorithm of HTML follows the HTML5 specification through the two stages of tokenization and DOM tree construction.
+
+When HTML parser is complete, browser can fetch CSS, images, JS, TS, etc. The browser marks the document as interactive and begins parsing scripts. This can only be done after the document was parsed by the HTML parser. CSS files parse according to their tag contents and style attributes. Each CSS file converts into a StyleSheet object. Each object has CSS rules with that align with CSS Synatax.
+
+security:
+
+Firewall
+----------------
+
+this process of connecting to our web page, we have to think of security. A firewall is a network security system. It monitors and controls all incoming and outgoing network traffic.
+In the case of the TCP/IP stack, we can place firewall here to filter packets unless they match the allowed rule set.
+
+
+HTTPS/SSL
+-------------
+
+When you see a URL, you see the little lock next to it. It means the site uses HTTPS, which is a secure extension of HTTP. In order to obtain the “S" for Secured, websites must configure an SSL/TLS certificate. The SSL certificate allows the HTTPS protocol to create a secure connection to the server. The goal is to make a safe and secure connection especially if the site includes personal data, financial statements and payments, or private login information
+HTTP is just a plain text data transfer. ALL data is unencrypted. This will make the website vulnerable to hackers that wantn to steal your data.
+
+SSL Stands for: Secure Sockets Layer, and its a type of digital security that allows encrypted communication between the web browser and the website.
+
+Conclusion
+all this happens at near light speed, taking only about a second to finish. It all happens in the background where the user doesnt see it, but we know its happening.  One thing i did learn thaht i didnt know about before this class was the load balancer. i had no idea websites had them and now i cant imagine one without one. The internet is one really secure place, and has a ton of rules, and only when they are followed exactly does everything work without the user seeing whats going on behind the scenes, which is the goal
+
